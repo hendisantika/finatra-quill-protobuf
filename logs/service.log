@@ -1,0 +1,335 @@
+I | 2016-11-30 18:54:34,104    c.t.i.l.Slf4jBridgeUtility$ [main] - [                ] org.slf4j.bridge.SLF4JBridgeHandler installed. ~ info(:128) 
+I | 2016-11-30 18:54:34,146    c.h.c.server.APIServerMain$ [main] - [                ] Process started ~ info(:128) 
+I | 2016-11-30 18:54:34,356    c.h.c.server.APIServerMain$ [main] - [                ]  => com.twitter.server.handler.AdminRedirectHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,356    c.h.c.server.APIServerMain$ [main] - [                ] /admin => com.twitter.server.handler.SummaryHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,357    c.h.c.server.APIServerMain$ [main] - [                ] /admin/server_info => com.twitter.finagle.Filter$$anon$1 ~ apply(:174) 
+I | 2016-11-30 18:54:34,357    c.h.c.server.APIServerMain$ [main] - [                ] /admin/contention => com.twitter.finagle.Filter$$anon$1 ~ apply(:174) 
+I | 2016-11-30 18:54:34,357    c.h.c.server.APIServerMain$ [main] - [                ] /admin/lint => com.twitter.server.handler.LintHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,358    c.h.c.server.APIServerMain$ [main] - [                ] /admin/lint.json => com.twitter.server.handler.LintHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,358    c.h.c.server.APIServerMain$ [main] - [                ] /admin/threads => com.twitter.server.handler.ThreadsHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,358    c.h.c.server.APIServerMain$ [main] - [                ] /admin/threads.json => com.twitter.server.handler.ThreadsHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,358    c.h.c.server.APIServerMain$ [main] - [                ] /admin/announcer => com.twitter.finagle.Filter$$anon$1 ~ apply(:174) 
+I | 2016-11-30 18:54:34,358    c.h.c.server.APIServerMain$ [main] - [                ] /admin/dtab => com.twitter.finagle.Filter$$anon$1 ~ apply(:174) 
+I | 2016-11-30 18:54:34,359    c.h.c.server.APIServerMain$ [main] - [                ] /admin/pprof/heap => com.twitter.server.handler.HeapResourceHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,359    c.h.c.server.APIServerMain$ [main] - [                ] /admin/pprof/profile => com.twitter.server.handler.ProfileResourceHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,359    c.h.c.server.APIServerMain$ [main] - [                ] /admin/pprof/contention => com.twitter.server.handler.ProfileResourceHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,359    c.h.c.server.APIServerMain$ [main] - [                ] /admin/ping => com.twitter.server.handler.ReplyHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,359    c.h.c.server.APIServerMain$ [main] - [                ] /admin/shutdown => com.twitter.server.handler.ShutdownHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,360    c.h.c.server.APIServerMain$ [main] - [                ] /admin/tracing => com.twitter.server.handler.TracingHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,360    c.h.c.server.APIServerMain$ [main] - [                ] /admin/events => com.twitter.server.handler.EventsHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,360    c.h.c.server.APIServerMain$ [main] - [                ] /admin/events/record/ => com.twitter.server.handler.EventRecordingHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,360    c.h.c.server.APIServerMain$ [main] - [                ] /admin/logging => com.twitter.server.handler.LoggingHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,361    c.h.c.server.APIServerMain$ [main] - [                ] /admin/metrics => com.twitter.server.handler.MetricQueryHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,361    c.h.c.server.APIServerMain$ [main] - [                ] /admin/clients/ => com.twitter.server.handler.ClientRegistryHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,361    c.h.c.server.APIServerMain$ [main] - [                ] /admin/servers/ => com.twitter.server.handler.ServerRegistryHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,362    c.h.c.server.APIServerMain$ [main] - [                ] /admin/files/ => com.twitter.server.handler.ResourceHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,362    c.h.c.server.APIServerMain$ [main] - [                ] /admin/registry.json => com.twitter.server.handler.RegistryHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,362    c.h.c.server.APIServerMain$ [main] - [                ] /admin/toggles => com.twitter.server.handler.ToggleHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,363    c.h.c.server.APIServerMain$ [main] - [                ] /admin/toggles/ => com.twitter.server.handler.ToggleHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,363    c.h.c.server.APIServerMain$ [main] - [                ] /favicon.ico => com.twitter.server.handler.ResourceHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,363    c.h.c.server.APIServerMain$ [main] - [                ] /admin/histograms => com.twitter.server.handler.HistogramQueryHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,363    c.h.c.server.APIServerMain$ [main] - [                ] /admin/histograms.json => com.twitter.server.handler.HistogramQueryHandler ~ apply(:174) 
+I | 2016-11-30 18:54:34,377    c.h.c.server.APIServerMain$ [main] - [                ] Serving admin http on 0.0.0.0/0.0.0.0:6665 ~ com$twitter$server$AdminHttpServer$$startServer(:189) 
+I | 2016-11-30 18:54:34,593            com.twitter.finagle [main] - [                ] Finagle version 6.39.0 (rev=f49b26aa1a89cbaec5aa7ac956ae7f379b4a5d97) built at 20161011-165646 ~ apply$mcV$sp(:82) 
+I | 2016-11-30 18:54:35,295  c.h.c.m.TypesafeConfigModule$ [main] - [                ] LOADING CONFIG FROM: dev ~ info(:128) 
+I | 2016-11-30 18:54:35,574    org.reflections.Reflections [main] - [                ] Reflections took 149 ms to scan 1 urls, producing 407 keys and 6016 values  ~ scan(:229) 
+I | 2016-11-30 18:54:36,966    c.h.c.server.APIServerMain$ [main] - [                ] Resolving Finagle clients before warmup ~ info(:128) 
+I | 2016-11-30 18:54:36,969            com.twitter.finagle [main] - [                ] 127.0.0.1:3306 resolved to Addr.Bound, current size=1 ~ apply(:44) 
+I | 2016-11-30 18:54:36,970    c.h.c.server.APIServerMain$ [main] - [                ] Done resolving clients: [127.0.0.1:3306]. ~ info(:128) 
+I | 2016-11-30 18:54:36,971  c.t.s.i.FinagleBuildRevision$ [main] - [                ] Resolved Finagle build revision: (rev=f49b26aa1a89cbaec5aa7ac956ae7f379b4a5d97) ~ info(:128) 
+D | 2016-11-30 18:54:37,159   c.t.f.h.m.MessageBodyModule$ [main] - [                ] Configuring MessageBodyManager ~ debug(:86) 
+I | 2016-11-30 18:54:37,162    c.h.c.server.APIServerMain$ [main] - [                ] Warming up. ~ info(:128) 
+I | 2016-11-30 18:54:37,252  c.t.f.http.routing.HttpRouter [main] - [                ] Adding routes
+DELETE  /v1/comments/:id
+DELETE  /v1/comments
+POST    /v1/activate/:id
+POST    /v1/activate
+POST    /v1/deactivate/:id
+POST    /v1/deactivate
+PUT     /v1/comments/
+GET     /v1/comments
+POST    /v1/comments/classifier ~ info(:128) 
+I | 2016-11-30 18:54:37,265    c.h.c.server.APIServerMain$ [main] - [                ]  => com.twitter.server.handler.AdminRedirectHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,266    c.h.c.server.APIServerMain$ [main] - [                ] /admin => com.twitter.server.handler.SummaryHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,266    c.h.c.server.APIServerMain$ [main] - [                ] /admin/server_info => com.twitter.finagle.Filter$$anon$1 ~ apply(:174) 
+I | 2016-11-30 18:54:37,266    c.h.c.server.APIServerMain$ [main] - [                ] /admin/contention => com.twitter.finagle.Filter$$anon$1 ~ apply(:174) 
+I | 2016-11-30 18:54:37,267    c.h.c.server.APIServerMain$ [main] - [                ] /admin/lint => com.twitter.server.handler.LintHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,267    c.h.c.server.APIServerMain$ [main] - [                ] /admin/lint.json => com.twitter.server.handler.LintHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,267    c.h.c.server.APIServerMain$ [main] - [                ] /admin/threads => com.twitter.server.handler.ThreadsHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,267    c.h.c.server.APIServerMain$ [main] - [                ] /admin/threads.json => com.twitter.server.handler.ThreadsHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,267    c.h.c.server.APIServerMain$ [main] - [                ] /admin/announcer => com.twitter.finagle.Filter$$anon$1 ~ apply(:174) 
+I | 2016-11-30 18:54:37,267    c.h.c.server.APIServerMain$ [main] - [                ] /admin/dtab => com.twitter.finagle.Filter$$anon$1 ~ apply(:174) 
+I | 2016-11-30 18:54:37,268    c.h.c.server.APIServerMain$ [main] - [                ] /admin/pprof/heap => com.twitter.server.handler.HeapResourceHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,268    c.h.c.server.APIServerMain$ [main] - [                ] /admin/pprof/profile => com.twitter.server.handler.ProfileResourceHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,268    c.h.c.server.APIServerMain$ [main] - [                ] /admin/pprof/contention => com.twitter.server.handler.ProfileResourceHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,268    c.h.c.server.APIServerMain$ [main] - [                ] /admin/ping => com.twitter.server.handler.ReplyHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,268    c.h.c.server.APIServerMain$ [main] - [                ] /admin/shutdown => com.twitter.server.handler.ShutdownHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,269    c.h.c.server.APIServerMain$ [main] - [                ] /admin/tracing => com.twitter.server.handler.TracingHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,269    c.h.c.server.APIServerMain$ [main] - [                ] /admin/events => com.twitter.server.handler.EventsHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,269    c.h.c.server.APIServerMain$ [main] - [                ] /admin/events/record/ => com.twitter.server.handler.EventRecordingHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,269    c.h.c.server.APIServerMain$ [main] - [                ] /admin/logging => com.twitter.server.handler.LoggingHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,269    c.h.c.server.APIServerMain$ [main] - [                ] /admin/metrics => com.twitter.server.handler.MetricQueryHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,270    c.h.c.server.APIServerMain$ [main] - [                ] /admin/clients/ => com.twitter.server.handler.ClientRegistryHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,270    c.h.c.server.APIServerMain$ [main] - [                ] /admin/servers/ => com.twitter.server.handler.ServerRegistryHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,270    c.h.c.server.APIServerMain$ [main] - [                ] /admin/files/ => com.twitter.server.handler.ResourceHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,270    c.h.c.server.APIServerMain$ [main] - [                ] /admin/registry.json => com.twitter.server.handler.RegistryHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,270    c.h.c.server.APIServerMain$ [main] - [                ] /admin/toggles => com.twitter.server.handler.ToggleHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,271    c.h.c.server.APIServerMain$ [main] - [                ] /admin/toggles/ => com.twitter.server.handler.ToggleHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,271    c.h.c.server.APIServerMain$ [main] - [                ] /favicon.ico => com.twitter.server.handler.ResourceHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,271    c.h.c.server.APIServerMain$ [main] - [                ] /admin/histograms => com.twitter.server.handler.HistogramQueryHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,271    c.h.c.server.APIServerMain$ [main] - [                ] /admin/histograms.json => com.twitter.server.handler.HistogramQueryHandler ~ apply(:174) 
+I | 2016-11-30 18:54:37,335    c.h.c.server.APIServerMain$ [main] - [                ] http server started on port: 9000 ~ info(:128) 
+I | 2016-11-30 18:54:37,336    c.h.c.server.APIServerMain$ [main] - [                ] Enabling health endpoint on port 6665 ~ info(:128) 
+I | 2016-11-30 18:54:37,337    c.h.c.server.APIServerMain$ [main] - [                ] com.hendisantika.comment.server.APIServerMain started. ~ info(:128) 
+I | 2016-11-30 18:54:37,338    c.h.c.server.APIServerMain$ [main] - [                ] Startup complete, server ready. ~ info(:128) 
+D | 2016-11-30 18:54:50,296 c.t.f.http.request.MediaRange$ [finagle/netty3-2] - [d6c8aad5499c0681] Reached the last media range : 'application/json' ~ debug(:86) 
+D | 2016-11-30 18:54:51,358 s.i.CommentMetadataServiceImpl [finagle/netty3-2] - [d6c8aad5499c0681]  bayesDetail -> TreeSet(Classification(WrappedArray(Uzumaki, Naruto, dan, Uchia, Sasuke, kali, ini, akan, ikut, Demo, Bela, Islam, Jilid, 3),negatif,6.1035156E-5)) ~ debug(:86) 
+D | 2016-11-30 18:54:51,361 s.i.CommentMetadataServiceImpl [finagle/netty3-2] - [d6c8aad5499c0681] not found suspect Comment Uzumaki Naruto dan Uchia Sasuke kali ini akan ikut Demo Bela Islam Jilid 3 ~ debug(:86) 
+D | 2016-11-30 18:54:51,364 s.i.CommentMetadataServiceImpl [finagle/netty3-2] - [d6c8aad5499c0681] comment Wed Nov 30 07:50:35 WIB 2016 - 1480467035 ~ debug(:86) 
+I | 2016-11-30 18:54:51,386 i.getquill.FinagleMysqlContext [finagle/netty3-2] - [d6c8aad5499c0681] INSERT INTO comment (article_id,reply_to,user_id,username,email,content,created,report,is_deleted,is_activated) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ~ executeActionReturning(:85) 
+W | 2016-11-30 18:54:51,474                  finagle-mysql [finagle/netty3-1] - [d6c8aad5499c0681] Injecting timezone-less `java.sql.Timestamp` with a hardcoded local timezone (Asia/Jakarta) ~ apply(:234) 
+D | 2016-11-30 18:54:51,548 c.t.f.http.request.MediaRange$ [finagle/netty3-1] - [d6c8aad5499c0681] Reached the last media range : 'application/json' ~ debug(:86) 
+D | 2016-11-30 18:55:31,378 c.t.f.http.request.MediaRange$ [finagle/netty3-2] - [2e2c7bf6251f197f] Reached the last media range : 'application/json' ~ debug(:86) 
+D | 2016-11-30 18:55:31,380 s.i.CommentMetadataServiceImpl [finagle/netty3-2] - [2e2c7bf6251f197f]  bayesDetail -> TreeSet(Classification(WrappedArray(Mantabssss, dech, Uzumaki, Naruto, akhirnya, bisa, menjadi, Hokage, dan, berteman, lagi, dengan, sasuke),negatif,1.2207031E-4)) ~ debug(:86) 
+D | 2016-11-30 18:55:31,380 s.i.CommentMetadataServiceImpl [finagle/netty3-2] - [2e2c7bf6251f197f] not found suspect Comment Mantabssss dech Uzumaki Naruto akhirnya bisa menjadi Hokage dan berteman lagi dengan sasuke ~ debug(:86) 
+D | 2016-11-30 18:55:31,381 s.i.CommentMetadataServiceImpl [finagle/netty3-2] - [2e2c7bf6251f197f] comment Wed Nov 30 18:55:11 WIB 2016 - 1480506911 ~ debug(:86) 
+I | 2016-11-30 18:55:31,386 i.getquill.FinagleMysqlContext [finagle/netty3-2] - [2e2c7bf6251f197f] INSERT INTO comment (article_id,reply_to,user_id,username,email,content,created,report,is_deleted,is_activated) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ~ executeActionReturning(:85) 
+W | 2016-11-30 18:55:31,389                  finagle-mysql [finagle/netty3-2] - [2e2c7bf6251f197f] Injecting timezone-less `java.sql.Timestamp` with a hardcoded local timezone (Asia/Jakarta) ~ apply(:234) 
+D | 2016-11-30 18:55:31,464 c.t.f.http.request.MediaRange$ [finagle/netty3-1] - [2e2c7bf6251f197f] Reached the last media range : 'application/json' ~ debug(:86) 
+D | 2016-11-30 18:56:45,696 c.t.f.http.request.MediaRange$ [finagle/netty3-2] - [bc7849aa40568b0e] Reached the last media range : 'application/json' ~ debug(:86) 
+D | 2016-11-30 18:56:45,698 s.i.CommentMetadataServiceImpl [finagle/netty3-2] - [bc7849aa40568b0e]  bayesDetail -> TreeSet(Classification(WrappedArray(Uzumaki, Naruto, akhirnya, bisa, menjadi, Hokage, dan, berteman, lagi, dengan, sasuke),negatif,4.8828125E-4)) ~ debug(:86) 
+D | 2016-11-30 18:56:45,699 s.i.CommentMetadataServiceImpl [finagle/netty3-2] - [bc7849aa40568b0e] not found suspect Comment Uzumaki Naruto akhirnya bisa menjadi Hokage dan berteman lagi dengan sasuke ~ debug(:86) 
+D | 2016-11-30 18:56:45,700 s.i.CommentMetadataServiceImpl [finagle/netty3-2] - [bc7849aa40568b0e] comment Wed Nov 30 18:56:32 WIB 2016 - 1480506992 ~ debug(:86) 
+I | 2016-11-30 18:56:45,701 i.getquill.FinagleMysqlContext [finagle/netty3-2] - [bc7849aa40568b0e] INSERT INTO comment (article_id,reply_to,user_id,username,email,content,created,report,is_deleted,is_activated) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ~ executeActionReturning(:85) 
+W | 2016-11-30 18:56:45,706                  finagle-mysql [finagle/netty3-2] - [bc7849aa40568b0e] Injecting timezone-less `java.sql.Timestamp` with a hardcoded local timezone (Asia/Jakarta) ~ apply(:234) 
+D | 2016-11-30 18:56:45,768 c.t.f.http.request.MediaRange$ [finagle/netty3-1] - [bc7849aa40568b0e] Reached the last media range : 'application/json' ~ debug(:86) 
+D | 2016-11-30 18:58:46,596 c.t.f.http.request.MediaRange$ [finagle/netty3-2] - [654fea19fc624427] Reached the last media range : 'application/json' ~ debug(:86) 
+W | 2016-11-30 18:58:46,600 i.e.j.JsonParseExceptionMapper [finagle/netty3-2] - [654fea19fc624427] com.fasterxml.jackson.core.JsonParseException: Invalid numeric value: Leading zeroes not allowed
+ at [Source: {
+  "articleId": 411,
+  "replyTo": 0,
+  "userId": 007,
+  "username": "UzumakiNaruto",
+  "email": "UzumakiNaruto@konohagakure",
+  "content":"Menjadi Hokage adalah jalan ninjaku",
+  "created" : 1480506992, 
+  "report": 0 
+}; line: 4, column: 14] ~ warn(:149) 
+D | 2016-11-30 18:59:10,245 c.t.f.http.request.MediaRange$ [finagle/netty3-2] - [5766195685418f06] Reached the last media range : 'application/json' ~ debug(:86) 
+D | 2016-11-30 18:59:10,247 s.i.CommentMetadataServiceImpl [finagle/netty3-2] - [5766195685418f06]  bayesDetail -> TreeSet(Classification(WrappedArray(Menjadi, Hokage, adalah, jalan, ninjaku),negatif,0.03125)) ~ debug(:86) 
+D | 2016-11-30 18:59:10,247 s.i.CommentMetadataServiceImpl [finagle/netty3-2] - [5766195685418f06] not found suspect Comment Menjadi Hokage adalah jalan ninjaku ~ debug(:86) 
+D | 2016-11-30 18:59:10,248 s.i.CommentMetadataServiceImpl [finagle/netty3-2] - [5766195685418f06] comment Wed Nov 30 18:56:32 WIB 2016 - 1480506992 ~ debug(:86) 
+I | 2016-11-30 18:59:10,258 i.getquill.FinagleMysqlContext [finagle/netty3-2] - [5766195685418f06] INSERT INTO comment (article_id,reply_to,user_id,username,email,content,created,report,is_deleted,is_activated) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ~ executeActionReturning(:85) 
+W | 2016-11-30 18:59:10,260                  finagle-mysql [finagle/netty3-2] - [5766195685418f06] Injecting timezone-less `java.sql.Timestamp` with a hardcoded local timezone (Asia/Jakarta) ~ apply(:234) 
+D | 2016-11-30 18:59:10,373 c.t.f.http.request.MediaRange$ [finagle/netty3-1] - [5766195685418f06] Reached the last media range : 'application/json' ~ debug(:86) 
+I | 2016-11-30 18:59:25,147 i.getquill.FinagleMysqlContext [finagle/netty3-2] - [ab2b2b229ef609dc] SELECT x35.id, x35.article_id, x35.reply_to, x35.user_id, x35.username, x35.email, x35.content, x35.created, x35.report, x35.is_deleted, x35.is_activated FROM comment x35 WHERE x35.article_id = ? LIMIT ? OFFSET ? ~ executeQuery(:71) 
+D | 2016-11-30 18:59:25,165 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [ab2b2b229ef609dc] Result Request -> CommentRequest(0,5,None,Some(411),None,None,Request("GET /v1/comments?off=0&lim=5&art=411", from /127.0.0.1:57448)) ~ debug(:86) 
+D | 2016-11-30 18:59:25,167 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [ab2b2b229ef609dc] Result comments -> List(CommentInsert(Some(1),411,0,212,Some(hendisantika),Some(hendisantika@yahoo.co.id),VXp1bWFraSBOYXJ1dG8gZGFuIFVjaGlhIFNhc3VrZSBrYWxpIGluaSBha2FuIGlrdXQgRGVtbyBC
+ZWxhIElzbGFtIEppbGlkIDM=
+,Wed Nov 30 07:50:35 WIB 2016,0,0,1), CommentInsert(Some(2),411,0,212,Some(hendisantika),Some(hendisantika@yahoo.co.id),TWFudGFic3NzcyBkZWNoIFV6dW1ha2kgTmFydXRvIGFraGlybnlhIGJpc2EgbWVuamFkaSBIb2th
+Z2UgZGFuIGJlcnRlbWFuIGxhZ2kgZGVuZ2FuIHNhc3VrZQ==
+,Wed Nov 30 18:55:11 WIB 2016,0,0,1), CommentInsert(Some(3),411,0,212,Some(hendisantika),Some(hendisantika@yahoo.co.id),VXp1bWFraSBOYXJ1dG8gYWtoaXJueWEgYmlzYSBtZW5qYWRpIEhva2FnZSBkYW4gYmVydGVtYW4g
+bGFnaSBkZW5nYW4gc2FzdWtl
+,Wed Nov 30 18:56:32 WIB 2016,0,0,1), CommentInsert(Some(4),411,0,404,Some(UzumakiNaruto),Some(UzumakiNaruto@konohagakure),TWVuamFkaSBIb2thZ2UgYWRhbGFoIGphbGFuIG5pbmpha3U=
+,Wed Nov 30 18:56:32 WIB 2016,0,0,1)) ~ debug(:86) 
+D | 2016-11-30 18:59:25,173 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [ab2b2b229ef609dc] Result retrieve -> List(commentId: 1
+articleId: 411
+username: "hendisantika"
+email: "hendisantika@yahoo.co.id"
+content: "Uzumaki Naruto dan Uchia Sasuke kali ini akan ikut Demo Bela Islam Jilid 3"
+created: 1480467035000
+isActivated: 1
+, commentId: 2
+articleId: 411
+username: "hendisantika"
+email: "hendisantika@yahoo.co.id"
+content: "Mantabssss dech Uzumaki Naruto akhirnya bisa menjadi Hokage dan berteman lagi dengan sasuke"
+created: 1480506911000
+isActivated: 1
+, commentId: 3
+articleId: 411
+username: "hendisantika"
+email: "hendisantika@yahoo.co.id"
+content: "Uzumaki Naruto akhirnya bisa menjadi Hokage dan berteman lagi dengan sasuke"
+created: 1480506992000
+isActivated: 1
+, commentId: 4
+articleId: 411
+username: "UzumakiNaruto"
+email: "UzumakiNaruto@konohagakure"
+content: "Menjadi Hokage adalah jalan ninjaku"
+created: 1480506992000
+isActivated: 1
+) ~ debug(:86) 
+D | 2016-11-30 18:59:25,175 c.t.f.http.request.MediaRange$ [finagle/netty3-1] - [ab2b2b229ef609dc] Reached the last media range : 'application/json' ~ debug(:86) 
+I | 2016-11-30 18:59:41,083 i.getquill.FinagleMysqlContext [finagle/netty3-2] - [04f5d359fc0aa586] SELECT x35.id, x35.article_id, x35.reply_to, x35.user_id, x35.username, x35.email, x35.content, x35.created, x35.report, x35.is_deleted, x35.is_activated FROM comment x35 WHERE (x35.article_id = ?) AND x35.content like ? LIMIT ? OFFSET ? ~ executeQuery(:71) 
+D | 2016-11-30 18:59:41,091 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [04f5d359fc0aa586] Result Request -> CommentRequest(0,5,Some(hokage),Some(411),None,None,Request("GET /v1/comments?off=0&lim=5&art=411&src=hokage", from /127.0.0.1:57448)) ~ debug(:86) 
+D | 2016-11-30 18:59:41,091 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [04f5d359fc0aa586] Result comments -> List() ~ debug(:86) 
+D | 2016-11-30 18:59:41,091 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [04f5d359fc0aa586] Result retrieve -> List() ~ debug(:86) 
+D | 2016-11-30 18:59:41,092 c.t.f.http.request.MediaRange$ [finagle/netty3-1] - [04f5d359fc0aa586] Reached the last media range : 'application/json' ~ debug(:86) 
+I | 2016-11-30 18:59:44,578 i.getquill.FinagleMysqlContext [finagle/netty3-2] - [bc1df7ee3e0e28cf] SELECT x35.id, x35.article_id, x35.reply_to, x35.user_id, x35.username, x35.email, x35.content, x35.created, x35.report, x35.is_deleted, x35.is_activated FROM comment x35 WHERE (x35.article_id = ?) AND x35.content like ? LIMIT ? OFFSET ? ~ executeQuery(:71) 
+D | 2016-11-30 18:59:44,584 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [bc1df7ee3e0e28cf] Result Request -> CommentRequest(0,5,Some(Hokage),Some(411),None,None,Request("GET /v1/comments?off=0&lim=5&art=411&src=Hokage", from /127.0.0.1:57448)) ~ debug(:86) 
+D | 2016-11-30 18:59:44,584 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [bc1df7ee3e0e28cf] Result comments -> List() ~ debug(:86) 
+D | 2016-11-30 18:59:44,585 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [bc1df7ee3e0e28cf] Result retrieve -> List() ~ debug(:86) 
+D | 2016-11-30 18:59:44,586 c.t.f.http.request.MediaRange$ [finagle/netty3-1] - [bc1df7ee3e0e28cf] Reached the last media range : 'application/json' ~ debug(:86) 
+I | 2016-11-30 18:59:55,586 i.getquill.FinagleMysqlContext [finagle/netty3-2] - [4a9588ccd7da6cc8] SELECT x35.id, x35.article_id, x35.reply_to, x35.user_id, x35.username, x35.email, x35.content, x35.created, x35.report, x35.is_deleted, x35.is_activated FROM comment x35 WHERE (x35.article_id = ?) AND x35.content like ? LIMIT ? OFFSET ? ~ executeQuery(:71) 
+D | 2016-11-30 18:59:55,591 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [4a9588ccd7da6cc8] Result Request -> CommentRequest(0,5,Some("Hokage"),Some(411),None,None,Request("GET /v1/comments?off=0&lim=5&art=411&src=%22Hokage%22", from /127.0.0.1:57448)) ~ debug(:86) 
+D | 2016-11-30 18:59:55,591 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [4a9588ccd7da6cc8] Result comments -> List() ~ debug(:86) 
+D | 2016-11-30 18:59:55,591 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [4a9588ccd7da6cc8] Result retrieve -> List() ~ debug(:86) 
+D | 2016-11-30 18:59:55,592 c.t.f.http.request.MediaRange$ [finagle/netty3-1] - [4a9588ccd7da6cc8] Reached the last media range : 'application/json' ~ debug(:86) 
+I | 2016-11-30 19:00:18,466 i.getquill.FinagleMysqlContext [finagle/netty3-2] - [57fe43a6a553e5b5] SELECT x35.id, x35.article_id, x35.reply_to, x35.user_id, x35.username, x35.email, x35.content, x35.created, x35.report, x35.is_deleted, x35.is_activated FROM comment x35 WHERE (x35.article_id = ?) AND x35.content like ? LIMIT ? OFFSET ? ~ executeQuery(:71) 
+D | 2016-11-30 19:00:18,476 s.i.CommentMetadataServiceImpl [finagle/netty3-2] - [57fe43a6a553e5b5] Result Request -> CommentRequest(0,5,Some(hokage),Some(411),None,None,Request("GET /v1/comments?off=0&lim=5&art=411&src=hokage", from /127.0.0.1:57448)) ~ debug(:86) 
+D | 2016-11-30 19:00:18,476 s.i.CommentMetadataServiceImpl [finagle/netty3-2] - [57fe43a6a553e5b5] Result comments -> List() ~ debug(:86) 
+D | 2016-11-30 19:00:18,479 s.i.CommentMetadataServiceImpl [finagle/netty3-2] - [57fe43a6a553e5b5] Result retrieve -> List() ~ debug(:86) 
+D | 2016-11-30 19:00:18,480 c.t.f.http.request.MediaRange$ [finagle/netty3-2] - [57fe43a6a553e5b5] Reached the last media range : 'application/json' ~ debug(:86) 
+I | 2016-11-30 19:00:44,177 i.getquill.FinagleMysqlContext [finagle/netty3-2] - [6261bc7c22590b92] SELECT x35.id, x35.article_id, x35.reply_to, x35.user_id, x35.username, x35.email, x35.content, x35.created, x35.report, x35.is_deleted, x35.is_activated FROM comment x35 WHERE (x35.article_id = ?) AND x35.content like ? LIMIT ? OFFSET ? ~ executeQuery(:71) 
+D | 2016-11-30 19:00:44,181 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [6261bc7c22590b92] Result Request -> CommentRequest(0,5,Some(hokage),Some(411),None,None,Request("GET /v1/comments?off=0&lim=5&art=411&src=hokage&stcDel=0", from /127.0.0.1:57448)) ~ debug(:86) 
+D | 2016-11-30 19:00:44,182 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [6261bc7c22590b92] Result comments -> List() ~ debug(:86) 
+D | 2016-11-30 19:00:44,182 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [6261bc7c22590b92] Result retrieve -> List() ~ debug(:86) 
+D | 2016-11-30 19:00:44,182 c.t.f.http.request.MediaRange$ [finagle/netty3-1] - [6261bc7c22590b92] Reached the last media range : 'application/json' ~ debug(:86) 
+I | 2016-11-30 19:01:00,343 i.getquill.FinagleMysqlContext [finagle/netty3-2] - [60ee6cb076996d7f] SELECT x35.id, x35.article_id, x35.reply_to, x35.user_id, x35.username, x35.email, x35.content, x35.created, x35.report, x35.is_deleted, x35.is_activated FROM comment x35 WHERE x35.article_id = ? LIMIT ? OFFSET ? ~ executeQuery(:71) 
+D | 2016-11-30 19:01:00,385 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [60ee6cb076996d7f] Result Request -> CommentRequest(0,5,None,Some(411),None,None,Request("GET /v1/comments?off=0&lim=5&art=411&\stcDel=0", from /127.0.0.1:57448)) ~ debug(:86) 
+D | 2016-11-30 19:01:00,385 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [60ee6cb076996d7f] Result comments -> List(CommentInsert(Some(1),411,0,212,Some(hendisantika),Some(hendisantika@yahoo.co.id),VXp1bWFraSBOYXJ1dG8gZGFuIFVjaGlhIFNhc3VrZSBrYWxpIGluaSBha2FuIGlrdXQgRGVtbyBC
+ZWxhIElzbGFtIEppbGlkIDM=
+,Wed Nov 30 07:50:35 WIB 2016,0,0,1), CommentInsert(Some(2),411,0,212,Some(hendisantika),Some(hendisantika@yahoo.co.id),TWFudGFic3NzcyBkZWNoIFV6dW1ha2kgTmFydXRvIGFraGlybnlhIGJpc2EgbWVuamFkaSBIb2th
+Z2UgZGFuIGJlcnRlbWFuIGxhZ2kgZGVuZ2FuIHNhc3VrZQ==
+,Wed Nov 30 18:55:11 WIB 2016,0,0,1), CommentInsert(Some(3),411,0,212,Some(hendisantika),Some(hendisantika@yahoo.co.id),VXp1bWFraSBOYXJ1dG8gYWtoaXJueWEgYmlzYSBtZW5qYWRpIEhva2FnZSBkYW4gYmVydGVtYW4g
+bGFnaSBkZW5nYW4gc2FzdWtl
+,Wed Nov 30 18:56:32 WIB 2016,0,0,1), CommentInsert(Some(4),411,0,404,Some(UzumakiNaruto),Some(UzumakiNaruto@konohagakure),TWVuamFkaSBIb2thZ2UgYWRhbGFoIGphbGFuIG5pbmpha3U=
+,Wed Nov 30 18:56:32 WIB 2016,0,0,1)) ~ debug(:86) 
+D | 2016-11-30 19:01:00,386 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [60ee6cb076996d7f] Result retrieve -> List(commentId: 1
+articleId: 411
+username: "hendisantika"
+email: "hendisantika@yahoo.co.id"
+content: "Uzumaki Naruto dan Uchia Sasuke kali ini akan ikut Demo Bela Islam Jilid 3"
+created: 1480467035000
+isActivated: 1
+, commentId: 2
+articleId: 411
+username: "hendisantika"
+email: "hendisantika@yahoo.co.id"
+content: "Mantabssss dech Uzumaki Naruto akhirnya bisa menjadi Hokage dan berteman lagi dengan sasuke"
+created: 1480506911000
+isActivated: 1
+, commentId: 3
+articleId: 411
+username: "hendisantika"
+email: "hendisantika@yahoo.co.id"
+content: "Uzumaki Naruto akhirnya bisa menjadi Hokage dan berteman lagi dengan sasuke"
+created: 1480506992000
+isActivated: 1
+, commentId: 4
+articleId: 411
+username: "UzumakiNaruto"
+email: "UzumakiNaruto@konohagakure"
+content: "Menjadi Hokage adalah jalan ninjaku"
+created: 1480506992000
+isActivated: 1
+) ~ debug(:86) 
+D | 2016-11-30 19:01:00,387 c.t.f.http.request.MediaRange$ [finagle/netty3-1] - [60ee6cb076996d7f] Reached the last media range : 'application/json' ~ debug(:86) 
+I | 2016-11-30 19:01:01,487 i.getquill.FinagleMysqlContext [finagle/netty3-2] - [6e9f3c945fd7a0b6] SELECT x35.id, x35.article_id, x35.reply_to, x35.user_id, x35.username, x35.email, x35.content, x35.created, x35.report, x35.is_deleted, x35.is_activated FROM comment x35 WHERE x35.article_id = ? LIMIT ? OFFSET ? ~ executeQuery(:71) 
+D | 2016-11-30 19:01:01,492 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [6e9f3c945fd7a0b6] Result Request -> CommentRequest(0,5,None,Some(411),None,None,Request("GET /v1/comments?off=0&lim=5&art=411&stcDel=0", from /127.0.0.1:57448)) ~ debug(:86) 
+D | 2016-11-30 19:01:01,493 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [6e9f3c945fd7a0b6] Result comments -> List(CommentInsert(Some(1),411,0,212,Some(hendisantika),Some(hendisantika@yahoo.co.id),VXp1bWFraSBOYXJ1dG8gZGFuIFVjaGlhIFNhc3VrZSBrYWxpIGluaSBha2FuIGlrdXQgRGVtbyBC
+ZWxhIElzbGFtIEppbGlkIDM=
+,Wed Nov 30 07:50:35 WIB 2016,0,0,1), CommentInsert(Some(2),411,0,212,Some(hendisantika),Some(hendisantika@yahoo.co.id),TWFudGFic3NzcyBkZWNoIFV6dW1ha2kgTmFydXRvIGFraGlybnlhIGJpc2EgbWVuamFkaSBIb2th
+Z2UgZGFuIGJlcnRlbWFuIGxhZ2kgZGVuZ2FuIHNhc3VrZQ==
+,Wed Nov 30 18:55:11 WIB 2016,0,0,1), CommentInsert(Some(3),411,0,212,Some(hendisantika),Some(hendisantika@yahoo.co.id),VXp1bWFraSBOYXJ1dG8gYWtoaXJueWEgYmlzYSBtZW5qYWRpIEhva2FnZSBkYW4gYmVydGVtYW4g
+bGFnaSBkZW5nYW4gc2FzdWtl
+,Wed Nov 30 18:56:32 WIB 2016,0,0,1), CommentInsert(Some(4),411,0,404,Some(UzumakiNaruto),Some(UzumakiNaruto@konohagakure),TWVuamFkaSBIb2thZ2UgYWRhbGFoIGphbGFuIG5pbmpha3U=
+,Wed Nov 30 18:56:32 WIB 2016,0,0,1)) ~ debug(:86) 
+D | 2016-11-30 19:01:01,494 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [6e9f3c945fd7a0b6] Result retrieve -> List(commentId: 1
+articleId: 411
+username: "hendisantika"
+email: "hendisantika@yahoo.co.id"
+content: "Uzumaki Naruto dan Uchia Sasuke kali ini akan ikut Demo Bela Islam Jilid 3"
+created: 1480467035000
+isActivated: 1
+, commentId: 2
+articleId: 411
+username: "hendisantika"
+email: "hendisantika@yahoo.co.id"
+content: "Mantabssss dech Uzumaki Naruto akhirnya bisa menjadi Hokage dan berteman lagi dengan sasuke"
+created: 1480506911000
+isActivated: 1
+, commentId: 3
+articleId: 411
+username: "hendisantika"
+email: "hendisantika@yahoo.co.id"
+content: "Uzumaki Naruto akhirnya bisa menjadi Hokage dan berteman lagi dengan sasuke"
+created: 1480506992000
+isActivated: 1
+, commentId: 4
+articleId: 411
+username: "UzumakiNaruto"
+email: "UzumakiNaruto@konohagakure"
+content: "Menjadi Hokage adalah jalan ninjaku"
+created: 1480506992000
+isActivated: 1
+) ~ debug(:86) 
+D | 2016-11-30 19:01:01,495 c.t.f.http.request.MediaRange$ [finagle/netty3-1] - [6e9f3c945fd7a0b6] Reached the last media range : 'application/json' ~ debug(:86) 
+D | 2016-11-30 19:06:16,483 c.t.f.http.request.MediaRange$ [finagle/netty3-3] - [095a1ba0533b76dc] Reached the last media range : 'application/json' ~ debug(:86) 
+D | 2016-11-30 19:06:16,485 s.i.CommentMetadataServiceImpl [finagle/netty3-3] - [095a1ba0533b76dc]  bayesDetail -> TreeSet(Classification(WrappedArray(Aku, gak, bisa, jadi, Hokage, euy),negatif,0.015625)) ~ debug(:86) 
+D | 2016-11-30 19:06:16,488 s.i.CommentMetadataServiceImpl [finagle/netty3-3] - [095a1ba0533b76dc] not found suspect Comment Aku gak bisa jadi Hokage euy ~ debug(:86) 
+D | 2016-11-30 19:06:16,489 s.i.CommentMetadataServiceImpl [finagle/netty3-3] - [095a1ba0533b76dc] comment Wed Nov 30 18:56:32 WIB 2016 - 1480506992 ~ debug(:86) 
+I | 2016-11-30 19:06:16,492 i.getquill.FinagleMysqlContext [finagle/netty3-3] - [095a1ba0533b76dc] INSERT INTO comment (article_id,reply_to,user_id,username,email,content,created,report,is_deleted,is_activated) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ~ executeActionReturning(:85) 
+W | 2016-11-30 19:06:16,496                  finagle-mysql [finagle/netty3-3] - [095a1ba0533b76dc] Injecting timezone-less `java.sql.Timestamp` with a hardcoded local timezone (Asia/Jakarta) ~ apply(:234) 
+D | 2016-11-30 19:06:16,562 c.t.f.http.request.MediaRange$ [finagle/netty3-1] - [095a1ba0533b76dc] Reached the last media range : 'application/json' ~ debug(:86) 
+D | 2016-11-30 19:06:54,112 c.t.f.http.request.MediaRange$ [finagle/netty3-3] - [9aea59d7208c48c8] Reached the last media range : 'application/json' ~ debug(:86) 
+D | 2016-11-30 19:06:54,113 s.i.CommentMetadataServiceImpl [finagle/netty3-3] - [9aea59d7208c48c8]  bayesDetail -> TreeSet(Classification(WrappedArray(Apalagi, aku, gak, bisa, jadi, Hokage, dong),negatif,0.0078125)) ~ debug(:86) 
+D | 2016-11-30 19:06:54,115 s.i.CommentMetadataServiceImpl [finagle/netty3-3] - [9aea59d7208c48c8] not found suspect Comment Apalagi aku gak bisa jadi Hokage dong ~ debug(:86) 
+D | 2016-11-30 19:06:54,117 s.i.CommentMetadataServiceImpl [finagle/netty3-3] - [9aea59d7208c48c8] comment Wed Nov 30 18:56:32 WIB 2016 - 1480506992 ~ debug(:86) 
+I | 2016-11-30 19:06:54,120 i.getquill.FinagleMysqlContext [finagle/netty3-3] - [9aea59d7208c48c8] INSERT INTO comment (article_id,reply_to,user_id,username,email,content,created,report,is_deleted,is_activated) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ~ executeActionReturning(:85) 
+W | 2016-11-30 19:06:54,122                  finagle-mysql [finagle/netty3-3] - [9aea59d7208c48c8] Injecting timezone-less `java.sql.Timestamp` with a hardcoded local timezone (Asia/Jakarta) ~ apply(:234) 
+D | 2016-11-30 19:06:54,244 c.t.f.http.request.MediaRange$ [finagle/netty3-1] - [9aea59d7208c48c8] Reached the last media range : 'application/json' ~ debug(:86) 
+D | 2016-11-30 19:08:03,984     c.t.f.h.i.r.RoutingService [finagle/netty3-3] - [                ] Request("DELETE /v1/delete/212", from /127.0.0.1:57656) not found in registered routes: DELETE  /v1/comments/:id, DELETE  /v1/comments, POST    /v1/activate/:id, POST    /v1/activate, POST    /v1/deactivate/:id, POST    /v1/deactivate, PUT     /v1/comments/, GET     /v1/comments, POST    /v1/comments/classifier ~ debug(:86) 
+I | 2016-11-30 19:09:00,512 i.getquill.FinagleMysqlContext [finagle/netty3-3] - [5c11ca222cf74c13] UPDATE comment SET is_deleted = ? WHERE id = ? ~ executeAction(:79) 
+I | 2016-11-30 19:31:49,360 i.getquill.FinagleMysqlContext [finagle/netty3-4] - [5a5138189383124e] UPDATE comment SET is_deleted = ? WHERE id = ? ~ executeAction(:79) 
+I | 2016-11-30 19:32:16,796 i.getquill.FinagleMysqlContext [finagle/netty3-4] - [7793480535546cd6] SELECT x35.id, x35.article_id, x35.reply_to, x35.user_id, x35.username, x35.email, x35.content, x35.created, x35.report, x35.is_deleted, x35.is_activated FROM comment x35 WHERE (x35.article_id = ?) AND (x35.is_activated = ?) LIMIT ? OFFSET ? ~ executeQuery(:71) 
+D | 2016-11-30 19:32:16,815 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [7793480535546cd6] Result Request -> CommentRequest(0,5,None,Some(411),None,Some(1),Request("GET /v1/comments?off=0&lim=5&art=411&stcDel=1&stsAct=1", from /127.0.0.1:57806)) ~ debug(:86) 
+D | 2016-11-30 19:32:16,816 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [7793480535546cd6] Result comments -> List(CommentInsert(Some(1),411,0,212,Some(hendisantika),Some(hendisantika@yahoo.co.id),VXp1bWFraSBOYXJ1dG8gZGFuIFVjaGlhIFNhc3VrZSBrYWxpIGluaSBha2FuIGlrdXQgRGVtbyBC
+ZWxhIElzbGFtIEppbGlkIDM=
+,Wed Nov 30 07:50:35 WIB 2016,0,0,1), CommentInsert(Some(2),411,0,212,Some(hendisantika),Some(hendisantika@yahoo.co.id),TWFudGFic3NzcyBkZWNoIFV6dW1ha2kgTmFydXRvIGFraGlybnlhIGJpc2EgbWVuamFkaSBIb2th
+Z2UgZGFuIGJlcnRlbWFuIGxhZ2kgZGVuZ2FuIHNhc3VrZQ==
+,Wed Nov 30 18:55:11 WIB 2016,0,1,1), CommentInsert(Some(3),411,0,212,Some(hendisantika),Some(hendisantika@yahoo.co.id),VXp1bWFraSBOYXJ1dG8gYWtoaXJueWEgYmlzYSBtZW5qYWRpIEhva2FnZSBkYW4gYmVydGVtYW4g
+bGFnaSBkZW5nYW4gc2FzdWtl
+,Wed Nov 30 18:56:32 WIB 2016,0,0,1), CommentInsert(Some(4),411,0,404,Some(UzumakiNaruto),Some(UzumakiNaruto@konohagakure),TWVuamFkaSBIb2thZ2UgYWRhbGFoIGphbGFuIG5pbmpha3U=
+,Wed Nov 30 18:56:32 WIB 2016,0,0,1), CommentInsert(Some(5),411,0,401,Some(UchihaSasuke),Some(UchihaSasuke@konohagakure),QWt1IGdhayBiaXNhIGphZGkgSG9rYWdlIGV1eQ==
+,Wed Nov 30 18:56:32 WIB 2016,0,0,1)) ~ debug(:86) 
+D | 2016-11-30 19:32:16,817 s.i.CommentMetadataServiceImpl [finagle/netty3-1] - [7793480535546cd6] Result retrieve -> List(commentId: 1
+articleId: 411
+username: "hendisantika"
+email: "hendisantika@yahoo.co.id"
+content: "Uzumaki Naruto dan Uchia Sasuke kali ini akan ikut Demo Bela Islam Jilid 3"
+created: 1480467035000
+isActivated: 1
+, commentId: 2
+articleId: 411
+username: "hendisantika"
+email: "hendisantika@yahoo.co.id"
+content: "Mantabssss dech Uzumaki Naruto akhirnya bisa menjadi Hokage dan berteman lagi dengan sasuke"
+created: 1480506911000
+isDeleted: 1
+isActivated: 1
+, commentId: 3
+articleId: 411
+username: "hendisantika"
+email: "hendisantika@yahoo.co.id"
+content: "Uzumaki Naruto akhirnya bisa menjadi Hokage dan berteman lagi dengan sasuke"
+created: 1480506992000
+isActivated: 1
+, commentId: 4
+articleId: 411
+username: "UzumakiNaruto"
+email: "UzumakiNaruto@konohagakure"
+content: "Menjadi Hokage adalah jalan ninjaku"
+created: 1480506992000
+isActivated: 1
+, commentId: 5
+articleId: 411
+username: "UchihaSasuke"
+email: "UchihaSasuke@konohagakure"
+content: "Aku gak bisa jadi Hokage euy"
+created: 1480506992000
+isActivated: 1
+) ~ debug(:86) 
+D | 2016-11-30 19:32:16,819 c.t.f.http.request.MediaRange$ [finagle/netty3-1] - [7793480535546cd6] Reached the last media range : 'application/json' ~ debug(:86) 

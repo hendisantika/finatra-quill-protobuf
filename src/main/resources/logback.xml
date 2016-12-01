@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- For assistance related to logback-translator or configuration  -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user             -->
+<!--                                                                -->
+<!-- For professional support please see                            -->
+<!--    http://www.qos.ch/shop/products/professionalSupport         -->
+<!--                                                                -->
+<configuration>
+
+    <shutdownHook class="ch.qos.logback.core.hook.DelayingShutdownHook"/>
+
+    <!-- ===================================================== -->
+    <!-- Service Config -->
+    <!-- ===================================================== -->
+    <property name="SERVICE_LOG_PATTERN"
+              value="[%-16X{traceId}] %msg"/>`
+
+    <property name="ACCESS_LOG_PATTERN"
+              value="%msg"/>
+
+    <!-- ===================================================== -->
+    <!-- Common Config -->
+    <!-- ===================================================== -->
+
+    <!-- JUL/JDK14 to Logback bridge -->
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+
+    <!-- Service Log (Rollover daily/50MB) -->
+    <!-- See http://logback.qos.ch/manual/appenders.html#RollingFileAppender -->
+    <appender name="SERVICE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.service.output:-logs/service.log}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.service.output:-logs/service.log}-%d{yyyy-MM-dd}.%i</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>50MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%.-1p | %d %30.30logger{30} [%t] - ${SERVICE_LOG_PATTERN} ~ %method\(:%L\) %n%rEx{full}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Access Log (Rollover daily/50MB) -->
+    <appender name="ACCESS" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.access.output:-logs/access.log}</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.access.output:-logs/access.log}-%d{yyyy-MM-dd}.%i</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>50MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${ACCESS_LOG_PATTERN}%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <Target>System.out</Target>
+        <encoder>
+            <pattern>%highlight(%.-1p) | %cyan(%d{HH:mm:ss.SSS}) %yellow(%30.30logger{30}) [%magenta(%t)] - %highlight(${SERVICE_LOG_PATTERN} %red(~ %method\(:%L\)) %n%rEx{full})</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- See http://logback.qos.ch/manual/layouts.html -->
+            <pattern>%date{HH:mm:ss} %-5level[%.15thread] [%-25logger{15}] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- ===================================================== -->
+    <!-- Primary Async Appenders -->
+    <!-- ===================================================== -->
+
+    <property name="async_queue_size" value="${queue.size:-1024}"/>
+    <property name="async_max_flush_time" value="${max.flush.time:-0}"/>
+
+    <appender name="ASYNC-SERVICE" class="ch.qos.logback.classic.AsyncAppender">
+        <queueSize>${async_queue_size}</queueSize>
+        <maxFlushTime>${async_max_flush_time}</maxFlushTime>
+        <appender-ref ref="SERVICE"/>
+    </appender>
+
+    <appender name="ASYNC-ACCESS" class="ch.qos.logback.classic.AsyncAppender">
+        <queueSize>${async_queue_size}</queueSize>
+        <maxFlushTime>${async_max_flush_time}</maxFlushTime>
+        <appender-ref ref="ACCESS"/>
+    </appender>
+
+    <!-- ===================================================== -->
+    <!-- Package Config -->
+    <!-- ===================================================== -->
+
+    <!-- Per-Package Config -->
+    <logger name="com.twitter" level="info"/>
+    <logger name="com.twitter.finatra" level="debug"/>
+    <logger name="com.hendisantika" level="debug"/>
+
+    <root level="${log_level:-INFO}">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ASYNC-SERVICE"/>
+    </root>
+
+    <!-- Access Logging -->
+    <logger name="com.twitter.finatra.http.filters.AccessLoggingFilter" level="debug" additivity="false">
+        <appender-ref ref="ASYNC-ACCESS"/>
+        <appender-ref ref="console"/>
+    </logger>
+
+</configuration>

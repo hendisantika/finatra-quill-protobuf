@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package msg;
+
+import "scalapb/scalapb.proto";
+//import "google/protobuf/timestamp.proto";
+
+option java_package = "com.hendisantika.comment.domain.msg";
+option java_outer_classname = "CommentsInsertProtos";
+
+option (scalapb.options) = {
+primitive_wrappers: true
+};
+
+message CommentInsertion {
+    option (scalapb.message).extends = "com.hendisantika.comment.marshalling.RequestAware";
+    uint64 commentId = 1;
+    uint64 articleId = 2;
+    uint64 replyTo = 3;
+    uint64 userId = 4;
+    string username = 5;
+    string email = 6;
+    string content = 7;
+//    google.protobuf.Timestamp created = 8;
+    uint64 created = 8;
+    uint64 report = 9;
+    uint64 isDeleted = 10;
+    uint64 isActivated = 11;
+}
+
+
+message CommentInsertResponse {
+    uint64 commentId = 1;
+}
+
+message CommentListResponse {
+    repeated CommentInsertion comments = 1;
+}
+
+message CommentFilter {
+    option (scalapb.message).extends = "com.hendisantika.comment.marshalling.RequestAware";
+    string content = 1;
+}
+
+message CommentFilterResponse {
+    string content = 1;
+    uint64 status = 2;
+}

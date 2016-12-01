@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package msg;
+
+import "scalapb/scalapb.proto";
+
+option java_package = "com.hendisantika.comment.domain.msg";
+option java_outer_classname = "CommentsAlterationProtos";
+
+option (scalapb.options) = {
+primitive_wrappers: true
+};
+
+message CommentRemoval {
+    option (scalapb.message).extends = "com.hendisantika.comment.marshalling.RequestAware";
+    repeated uint64 ids = 1;
+}

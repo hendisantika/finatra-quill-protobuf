@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package msg;
+
+import "scalapb/scalapb.proto";
+
+option java_package = "com.hendisantika.model.proto";
+option java_outer_classname = "ExceptionProtos";
+
+option (scalapb.options) = {
+    primitive_wrappers: true
+//  package_name: "id.co.babe.model.proto"
+};
+
+message MSException {
+    option (scalapb.message).extends = "com.hendisantika.comment.marshalling.RequestAware";
+    string errCode = 1;
+    string errorMsg = 2;
+}
